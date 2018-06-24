@@ -1,7 +1,8 @@
 function myFunction() {
     
-    // initialize variables
+    // initialize array to store prime numbers
     let primeArray = [];
+    // store user-entered number
     let userNum = document.getElementById("testNum").value;
     
     // divide user input by 2 until result is not 0
