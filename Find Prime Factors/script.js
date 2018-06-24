@@ -1,37 +1,27 @@
+/* 
+Find Prime Numbers - Have the user enter a number and find/dispaly all Prime Numbers (if there are any) 
+leading up to the user's number.
+*/
+
+// get number to test from user
+let userNum = document.getElementById("testNum").value;
+
 function myFunction() {
-    
     // initialize array to store prime numbers
     let primeArray = [];
-    // store user-entered number
-    let userNum = document.getElementById("testNum").value;
-    
-    // divide user input by 2 until result is not 0
-    while (userNum % 2 === 0) {
-        // avoid infinite loop
-        if (userNum == 0) {
-            break;
+    // nested for loops to find prime numbers
+    for (let i = 2; i <= userNum; i++) {
+        for (let j = 2; j <= userNum; j++) {
+            if (i === j) {
+                // if prime, then 'push' to array
+                primeArray.push(i);
+            }
+            if (i % j === 0) {
+                // break and repeat loop if not prime
+                break;
+            }
         }
-        // if divisible by 2, then add 2 to array
-        primeArray.push(2);
-        userNum = userNum / 2;
     }
-    
-    // divide user input by 3 until result is not 0
-    while (userNum % 3 === 0) {
-        // avoid infinite loop
-        if (userNum == 0) {
-            break;
-        }
-        // if divisible by 3, then add 3 to array
-        primeArray.push(3);
-        userNum = userNum / 3;
-    }
-    
-    // if the remaining number is still larger than 2, then add number to array
-    if (userNum > 2) {
-        primeArray.push(userNum);
-    }
-    
-    // display the resulting prime array
+    // output prime numbers
     document.getElementById("showPrimes").innerHTML = primeArray.join(', ');
 }
