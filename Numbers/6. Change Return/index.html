@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Change Return</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h3>Enter the Cost of the Item You Wish to Purchase and Your Payment Amount Below--We Will Calculate Your Change</h3>
+    <p style="color:gray;">Please enter your cost and payment in U.S. dollars in the following format (ex. $15.69)</p>
+    
+    
+    Cost: <input type="number" step="0.01" min=0 id="cost" value="">
+    Your Payment: <input type="number" step="0.01" min=0 id="payment" value="">
+    <button onclick="myFunction()">Calculate Change</button>
+    Your change is:
+    <p id="showChange"></p>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
