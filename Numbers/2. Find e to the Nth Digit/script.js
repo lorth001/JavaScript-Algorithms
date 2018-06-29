@@ -1,5 +1,17 @@
+/*
+**********
+Luke Orth - Find e to the Nth Digit - 6/20/2018
+**********
+Last edit on 6/29/2018 -- replace .onClick with .addEventListener
+**********
+Generate the number 'e' with a certain number of trailing decimal places as specified by the user
+**********
+*/
+
 // initialize variable for e
 let e = Math.E;
+// create variable for event handler
+let findE = document.getElementById("findE");
 
 function myFunction() {
     // get length from user
@@ -16,3 +28,6 @@ function myFunction() {
         document.getElementById("show_e").innerHTML = final_e;
     }
 }
+
+// execute myFunction when button is clicked
+findE.addEventListener("click", myFunction);
