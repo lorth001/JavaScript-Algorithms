@@ -1,9 +1,17 @@
 /*
-Next Prime Number - Have the program find prime numbers until the user chooses to stop asking for the next one.
+**********
+Luke Orth - Next Prime - 6/22/2018
+**********
+Last edit on 6/30/2018 -- replace .onClick with .addEventListener
+**********
+Have the program find prime numbers until the user chooses to stop asking for the next one
+**********
 */
 
 // start with 2
 let nextNum = 2;
+// create variable for event handler
+let nextPrime = document.getElementById("nextPrime");
 
 function myFunction() {
     // initialize array to store prime numbers
@@ -24,3 +32,6 @@ function myFunction() {
     // increment index for each button press
     nextNum++;
 }
+
+// execute myFunction when button is clicked
+nextPrime.addEventListener("click", myFunction);
