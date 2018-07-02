@@ -1,7 +1,15 @@
 /*
-Change Return Program - The user enters a cost and then the amount of money given. 
-The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.
+**********
+Luke Orth - Change Return - 6/23/2018
+**********
+Last edit on 7/01/2018
+**********
+The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change for the user.
+**********
 */
+
+// create variable for event handler
+let changeCalc = document.getElementById("changeCalc");
 
 function myFunction() {
     // initialize variables for user input
@@ -50,3 +58,6 @@ function myFunction() {
         document.getElementById("showChange").innerHTML = "Quarters: " + quarters + "<br />Dimes: " + dimes + "<br />Nickels: " + nickels + "<br />Pennies: " + pennies;
     }
 }
+
+// execute myFunction when button is clicked
+changeCalc.addEventListener("click", myFunction);
