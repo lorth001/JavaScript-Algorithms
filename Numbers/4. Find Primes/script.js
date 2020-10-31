@@ -28,5 +28,5 @@ function myFunction() {
     document.getElementById("showPrimes").innerHTML = primeArray.join(', ');
 }
 
-// execute myFunction when button is clicked
+// execute myFunction when the button is clicked
 findPrimes.addEventListener("click", myFunction);
